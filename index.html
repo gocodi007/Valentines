@@ -178,6 +178,9 @@
       <button id="noBtn">No</button>
     </section>
 
+    <!-- HINT -->
+    <div class="hint" id="hint">You might not have a choice 😈</div>
+
     <section class="result" id="result">
       <h2>YAY! 🎉</h2>
       <img
@@ -253,7 +256,7 @@
     }
 
     function moveNo(px, py) {
-      noBtn.textContent = "sike";
+        noBtn.textContent = "sike";
       
       const z = zone.getBoundingClientRect();
       const b = noBtn.getBoundingClientRect();
@@ -291,6 +294,7 @@
     /* ---------- YES CLICK ---------- */
     yesBtn.addEventListener("click", () => {
       zone.style.display = "none";
+      hint.style.display = "none";     // HIDE THE HINT
       result.style.display = "block";
       resizeConfettiCanvas();
       fullScreenConfetti();
@@ -298,9 +302,6 @@
   </script>
 </body>
 </html>
-
-
-
 
 
 
